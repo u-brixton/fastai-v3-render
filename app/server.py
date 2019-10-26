@@ -1,6 +1,7 @@
 import aiohttp
 import asyncio
 import uvicorn
+import pandas as pd
 from fastai import *
 from fastai.vision import *
 from io import BytesIO
@@ -13,6 +14,7 @@ from starlette.staticfiles import StaticFiles
 #export_file_name = 'export.pkl'
 export_file_url = 'https://drive.google.com/uc?export=download&id=1kAhWCi3wraGbfZU3BsPhsM2XkkXhKPPU'
 export_file_name = 'export_stage150.pkl'
+
 
 #classes = ['black', 'grizzly', 'teddys']
 classes = ['Abyssinian', 'Bengal', 'Birman', 'Bombay', 'British_Shorthair', 'Egyptian_Mau', 'Maine_Coon', 'Persian', 'Ragdoll', 'Russian_Blue', 'Siamese', 'Sphynx', 'american_bulldog', 'american_pit_bull_terrier', 'basset_hound', 'beagle', 'boxer', 'chihuahua', 'english_cocker_spaniel', 'english_setter', 'german_shorthaired', 'great_pyrenees', 'havanese', 'japanese_chin', 'keeshond', 'leonberger', 'miniature_pinscher', 'newfoundland', 'pomeranian', 'pug', 'saint_bernard', 'samoyed', 'scottish_terrier', 'shiba_inu', 'staffordshire_bull_terrier', 'wheaten_terrier', 'yorkshire_terrier']
